@@ -1,0 +1,9 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Sava
+ * Date: 23.8.2016.
+ * Time: 18.27
+ */
+$redirect_url="https:%2F%2Fsite.com%2Flavaruncallback.html";
+$clientid="654321ads3dfs65d4s68f43s5d4f68574fds21sdf";
