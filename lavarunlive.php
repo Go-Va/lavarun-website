@@ -59,7 +59,7 @@ if(!isset($_GET["username"]) || !validate($_GET["username"], "username")){
     $redirect_url = "invalid";
     $clientid = "invalid";
     require_once("settings.php");
-    header("Location: https://beam.pro/oauth/authorize?response_type=token&redirect_uri=".$redirect_url."&scope=tetris:robot:self&client_id=".$clientid."&state=".$state);
+    header("Location: https://beam.pro/oauth/authorize?response_type=token&redirect_uri=".$redirect_url."&scope=tetris:robot:self%20channel:update:self&client_id=".$clientid."&state=".$state);
     die();
 }
 ?>
