@@ -35,7 +35,7 @@ if($_GET["token_type"]=="Bearer") {
 <?php if ($error != ""){
     echo $error;
 }else {
-    echo "Success, you can close this tab now";
+    echo "<p>Success, you can close this tab now</p>";
     echo "<script>window.close();</script>";
 }
 ?>
