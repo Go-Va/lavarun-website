@@ -1,0 +1,29 @@
+.success{
+    color: #3fff6b;
+}
+.error {
+    color: #ff4546;
+}
+body {
+    background-color: rgb(50, 50, 50);
+    font-family: 'Roboto', sans-serif;
+}
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+}
+p {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.fa {
+    font-size: 15em !important;
+    margin:auto;
+}

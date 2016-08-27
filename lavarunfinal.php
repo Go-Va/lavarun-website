@@ -8,7 +8,7 @@ $error = "";
  * Date: 21.8.2016.
  * Time: 20.04
  */
-if($_GET["token_type"]=="Bearer") {
+if(isset($_GET["token_type"]) && $_GET["token_type"]=="Bearer") {
     if (!isset($_GET["access_token"]) || !isset($_GET["state"])){
         $error = "Parameters incorrect error, please try again";
     }elseif (!isset($_COOKIE["state"]) || $_GET["state"] != $_COOKIE["state"]){
@@ -26,17 +26,22 @@ if($_GET["token_type"]=="Bearer") {
             $error = $e;
         }
     }
+}else{
+    $error = "Wrong token type, please try again";
 }
 ?>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Lava run beam integration</title>
+    <link rel="stylesheet" href="main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://use.fontawesome.com/929b26d666.js"></script>
 </head>
 <body>
-<?php if ($error != ""){
-    echo $error;
+<?php if ($error == ""){
+    echo "<div><i class=\"fa fa-times error\" aria-hidden=\"true\"></i> <p class = \"error\">".$error."</p></div>";
 }else {
-    echo "<p>Success, you can close this tab now</p>";
-    echo "<script>window.close();</script>";
+    echo "<div> <i class=\"fa fa-check success\" aria-hidden=\"true\"></i> <p class = \"success\">Success, you can close this tab now</p></div>";
 }
 ?>
 </body>
