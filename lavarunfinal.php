@@ -38,7 +38,7 @@ if(isset($_GET["token_type"]) && $_GET["token_type"]=="Bearer") {
     <script src="https://use.fontawesome.com/929b26d666.js"></script>
 </head>
 <body>
-<?php if ($error == ""){
+<?php if ($error != ""){
     echo "<div><i class=\"fa fa-times error\" aria-hidden=\"true\"></i> <p class = \"error\">".$error."</p></div>";
 }else {
     echo "<div> <i class=\"fa fa-check success\" aria-hidden=\"true\"></i> <p class = \"success\">Success, you can close this tab now</p></div>";
